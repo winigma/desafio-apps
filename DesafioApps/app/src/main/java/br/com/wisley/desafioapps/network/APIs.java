@@ -5,4 +5,6 @@ package br.com.wisley.desafioapps.network;
  */
 
 public class APIs {
+
+    public static final String URL_CONTENT =   "https://raw.githubusercontent.com/Infoglobo/desafio-apps/master/capa.json";
 }

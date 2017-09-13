@@ -1,6 +1,7 @@
 package br.com.wisley.desafioapps.network.requesthelper.contracts;
 
 import br.com.wisley.desafioapps.model.Content;
+import br.com.wisley.desafioapps.model.Result;
 import br.com.wisley.desafioapps.model.response.ErrorResponse;
 
 /**
@@ -19,7 +20,7 @@ public interface IContentRequest {
      *
      * @param response
      */
-    void notifySuccess(final Content response);
+    void notifySuccess(final Result response);
 
     /**
      * notify error

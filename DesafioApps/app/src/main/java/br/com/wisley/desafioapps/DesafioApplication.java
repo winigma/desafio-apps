@@ -37,6 +37,12 @@ public class DesafioApplication extends Application {
     private Gson gson;
 
 
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        initializeComponents();
+    }
+
     public static DesafioApplication getInstance() {
         return mInstance;
     }
