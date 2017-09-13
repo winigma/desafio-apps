@@ -11,16 +11,17 @@
         android:layout_height="240dp"
         android:background="@drawable/logo_oglobo">
         <TextView
+            android:id="@+id/tvMainEditorial"
             style="@style/TextEditorial"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Brasil"
             android:gravity="center"
-            android:layout_above="@+id/tvMain"
+            android:layout_above="@+id/tvTittleMain"
             android:paddingBottom="5dp"
             />
         <TextView
-            android:id="@+id/tvMain"
+            android:id="@+id/tvTittleMain"
             style="@style/TextViewNewsMain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
