@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/topNews"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@drawable/logo_oglobo">
+        <TextView
+            style="@style/TextEditorial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Brasil"
+            android:gravity="center"
+            android:layout_above="@+id/tvMain"
+            android:paddingBottom="5dp"
+            />
+        <TextView
+            android:id="@+id/tvMain"
+            style="@style/TextViewNewsMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:text="Sergio Cabral e  denunciado pela 6
+             vez na Lavajato"
+            android:paddingBottom="8dp"/>
+
+
+
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topNews"
+        tools:listitem="@layout/item_news"
+        android:scrollbars="vertical"/>
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!-- A CardView that contains a TextView -->
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivThumbnail"
+                android:layout_width="128dp"
+                android:layout_height="96dp"
+                android:src="@drawable/logo_oglobo" />
+
+            <TextView
+                android:id="@+id/tvEditorial"
+                style="@style/TextEditorialItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ivThumbnail"
+                android:layout_toRightOf="@id/ivThumbnail"
+                android:text="SOCIEDADE" />
+
+            <TextView
+                android:id="@+id/tvTittle"
+                style="@style/TextContentItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/ivThumbnail"
+                android:layout_alignLeft="@id/tvEditorial"
+                android:layout_below="@id/tvEditorial"
+                android:text="Comissao do Senado aprova Uniao estavel entre pessoas do mesmo" />
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
