@@ -26,6 +26,10 @@ public class Content implements Parcelable {
     private Section secao;
 
 
+
+    private boolean isHeader;
+
+
     protected Content(Parcel in) {
         autores = in.createStringArrayList();
         informePublicitario = in.readByte() != 0;
@@ -178,5 +182,12 @@ public class Content implements Parcelable {
 
     public void setSecao(Section secao) {
         this.secao = secao;
+    }
+    public boolean isHeader() {
+        return isHeader;
+    }
+
+    public void setHeader(boolean header) {
+        isHeader = header;
     }
 }

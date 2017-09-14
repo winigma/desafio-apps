@@ -1,5 +1,7 @@
 package br.com.wisley.desafioapps.view.holder;
 
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -12,9 +14,7 @@ import br.com.wisley.desafioapps.R;
 
 public class HolderHomeFragment extends AbstractHolderFragment {
 
-    private RelativeLayout topNews;
-    private TextView tvMainEditorial;
-    private TextView tvTittleMain;
+    private RecyclerView rvBody;
 
     public HolderHomeFragment(View siteSelectionView) {
         super(siteSelectionView);
@@ -25,25 +25,22 @@ public class HolderHomeFragment extends AbstractHolderFragment {
      */
     @Override
     protected void initializeFields() {
-        this.topNews = (RelativeLayout) getField(R.id.topNews);
-        this.tvMainEditorial = (TextView) getField(R.id.tvMainEditorial);
-        this.tvTittleMain = (TextView) getField(R.id.tvTittleMain);
+        this.rvBody = (RecyclerView) getField(R.id.rvBody);
+
     }
 
     @Override
     protected void initializeActions() {
-
+        rvBody.setHasFixedSize(true);
+        rvBody.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
+        rvBody.setNestedScrollingEnabled(false);
     }
 
-    public RelativeLayout getTopNews() {
-        return topNews;
+    public RecyclerView getRvBody() {
+        return rvBody;
     }
 
-    public TextView getTvMainEditorial() {
-        return tvMainEditorial;
-    }
-
-    public TextView getTvTittleMain() {
-        return tvTittleMain;
+    public void setRvBody(RecyclerView rvBody) {
+        this.rvBody = rvBody;
     }
 }

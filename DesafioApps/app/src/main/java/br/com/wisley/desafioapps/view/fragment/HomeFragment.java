@@ -14,6 +14,7 @@ import br.com.wisley.desafioapps.model.Result;
 import br.com.wisley.desafioapps.model.response.ErrorResponse;
 import br.com.wisley.desafioapps.presenter.PresenterContent;
 import br.com.wisley.desafioapps.presenter.interfaces.IContentCallback;
+import br.com.wisley.desafioapps.view.adapter.NewsAdapter;
 import br.com.wisley.desafioapps.view.holder.HolderHomeFragment;
 
 /**
@@ -24,6 +25,7 @@ public class HomeFragment extends Fragment implements IContentCallback {
 
     private HolderHomeFragment mHolder;
     private PresenterContent mPresenter;
+    private NewsAdapter mAdapter;
 
 
     @Override
@@ -60,6 +62,10 @@ public class HomeFragment extends Fragment implements IContentCallback {
     @Override
     public void notifySucces(Result reponse) {
 
+
+        reponse.getConteudos().get(0).setHeader(true);
+        this.mAdapter = new NewsAdapter(reponse.getConteudos());
+        this.mHolder.getRvBody().setAdapter(this.mAdapter);
         Toast.makeText(getActivity(),"Sucesso",Toast.LENGTH_LONG).show();
     }
 }
