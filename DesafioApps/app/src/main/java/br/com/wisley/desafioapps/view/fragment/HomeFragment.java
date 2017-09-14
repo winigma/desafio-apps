@@ -17,6 +17,7 @@ import br.com.wisley.desafioapps.model.response.ErrorResponse;
 import br.com.wisley.desafioapps.presenter.PresenterContent;
 import br.com.wisley.desafioapps.presenter.interfaces.IContentCallback;
 import br.com.wisley.desafioapps.util.ActivityUtils;
+import br.com.wisley.desafioapps.view.activity.MainActivity;
 import br.com.wisley.desafioapps.view.adapter.NewsAdapter;
 import br.com.wisley.desafioapps.view.holder.HolderHomeFragment;
 import br.com.wisley.desafioapps.view.interfaces.OnClickDetail;
@@ -42,6 +43,7 @@ public class HomeFragment extends Fragment implements IContentCallback, OnClickD
         super.onViewCreated(view, savedInstanceState);
         mPresenter = new PresenterContent(this);
         mPresenter.notifyStart();
+        initializeView();
     }
 
     @Nullable
@@ -94,5 +96,11 @@ public class HomeFragment extends Fragment implements IContentCallback, OnClickD
             startActivity(browserIntent);
         }
 
+    }
+
+    private void initializeView() {
+        ((MainActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        ((MainActivity) getActivity()).getSupportActionBar().setDisplayShowHomeEnabled(false);
+        ((MainActivity) getActivity()).enableLogo(true);
     }
 }

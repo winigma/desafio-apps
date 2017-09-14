@@ -11,6 +11,7 @@ import com.squareup.picasso.Picasso;
 
 import br.com.wisley.desafioapps.R;
 import br.com.wisley.desafioapps.model.Content;
+import br.com.wisley.desafioapps.view.activity.MainActivity;
 import br.com.wisley.desafioapps.view.holder.HolderNewsDetailFragment;
 
 /**
@@ -45,6 +46,18 @@ public class NewsDetailFragment extends Fragment {
     }
 
     private void initializeView() {
+        /**
+         * Toolbar
+         */
+        ((MainActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        ((MainActivity) getActivity()).getSupportActionBar().setDisplayShowHomeEnabled(true);
+        ((MainActivity) getActivity()).enableLogo(false);
+        ((MainActivity) getActivity()).showCustomTitle(mContent.getSecao().getNome());
+
+
+        /**
+         * itens view
+         */
         mHolder.getTvTitle().setText(this.mContent.getTitulo());
         mHolder.getTvSubTitle().setText(this.mContent.getSubTitulo());
         mHolder.getTvDate().setText(this.mContent.getPublicadoEm());
