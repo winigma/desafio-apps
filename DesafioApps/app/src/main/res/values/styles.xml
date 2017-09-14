@@ -27,8 +27,6 @@
         <item name="android:textSize">16sp</item>
         <item name="android:paddingLeft">15dp</item>
         <item name="android:paddingTop">10dp</item>
-
-
     </style>
     <style name="TextContentItem">
         <item name="android:textColor">@color/blue_home</item>
@@ -37,11 +35,45 @@
         <item name="android:paddingRight">2dp</item>
         <item name="android:paddingTop">10dp</item>
         <item name="android:paddingLeft">15dp</item>
-
-
     </style>
 
 
+
+    <!--Fragment Detail-->
+    <style name="TextTitleDetail">
+        <item name="android:textColor">@color/color_text_grey</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="TextSubTitleDetail">
+        <item name="android:textColor">@color/color_text_grey</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="TextContentNews">
+        <item name="android:textColor">@color/color_blue</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+
+    </style>
+
+    <style name="TextLegendImage">
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+
+    </style>
 
 
 </resources>

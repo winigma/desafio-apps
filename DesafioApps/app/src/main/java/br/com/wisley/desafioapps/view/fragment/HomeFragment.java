@@ -16,12 +16,13 @@ import br.com.wisley.desafioapps.presenter.PresenterContent;
 import br.com.wisley.desafioapps.presenter.interfaces.IContentCallback;
 import br.com.wisley.desafioapps.view.adapter.NewsAdapter;
 import br.com.wisley.desafioapps.view.holder.HolderHomeFragment;
+import br.com.wisley.desafioapps.view.interfaces.OnClickDetail;
 
 /**
  * Created by Wisley on 12/09/17.
  */
 
-public class HomeFragment extends Fragment implements IContentCallback {
+public class HomeFragment extends Fragment implements IContentCallback, OnClickDetail {
 
     private HolderHomeFragment mHolder;
     private PresenterContent mPresenter;
@@ -67,5 +68,10 @@ public class HomeFragment extends Fragment implements IContentCallback {
         this.mAdapter = new NewsAdapter(reponse.getConteudos());
         this.mHolder.getRvBody().setAdapter(this.mAdapter);
         Toast.makeText(getActivity(),"Sucesso",Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onClickOpenDetail(final int position) {
+
     }
 }

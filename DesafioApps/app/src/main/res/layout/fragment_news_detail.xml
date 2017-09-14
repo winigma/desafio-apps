@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/sv_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/TextTitleDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sergio Cabral e denunciado pela sexta vez na lava jato" />
+
+            <TextView
+                android:id="@+id/tvSubTitle"
+                style="@style/TextSubTitleDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTitle"
+                android:text="Sergio Cabral e denunciado pela sexta vez na lava jato" />
+
+            <TextView
+                android:id="@+id/tvAuthor"
+                style="@style/TextSubTitleDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvSubTitle"
+                android:text="Por o Globo" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                style="@style/TextSubTitleDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvAuthor"
+                android:text="Por o Globo" />
+
+            <RelativeLayout
+                android:id="@+id/rlImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDate">
+
+                <ImageView
+                    android:id="@+id/ivThumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="148dp"
+                    android:src="@drawable/logo_oglobo" />
+
+                <TextView
+                    android:id="@+id/tvImgLegend"
+                    style="@style/TextLegendImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="Por o Globo" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvContent"
+                style="@style/TextContentNews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlImage"
+                android:text=" BRASÍLIA - Se os bastidores de Brasília mostram os principais atores da cena política à beira de um ataque de nervos com a expectativa da divulgação da lista de investigados na Lava-Jato pelo procurador geral da República, Rodrigo Janot, por algumas horas nesta terça-feira à noite autoridades investigadas, advogados de enrolados no caso, juízes do Supremo Tribunal Federal (STF) , o presidente Michel Temer, e deputados da oposição se misturaram na celebração dos 50 anos de jornalismo do colunista Ricardo Noblat.\n\nTemer circulou à vontade pelo salão do restaurante Piantella . Estava satisfeito com o comparecimento em massa de políticos na solenidade de posse dos dois novos ministros, à tarde. E aproveitou para fazer as pazes com aliados descontentes com as nomeações dos novos ministros, como o vice-presidente da Câmara, o deputado Fabio Ramalho (PMDB-MG), que ameaçou abrir uma dissidência no governo por não ver seu pleito por um ministro mineiro atendido.\n\n— Fabinho, a gente não pode brigar. Vá almoçar comigo amanhã e leve a bancada do PMDB de Minas para a gente conversar — disse Temer, dando um apertado abraço e cochichando no ouvido do deputado mineiro.\n\nJá amolecido, Fabinho disse a Temer que eles não iriam brigar, que era a divergência na convergência.\n\n— Vou levar uma leitoinha assada para o almoço e fazer um acerto de contas com Temer, fazer um acerto de dívidas — disse Fabinho.\n\nAo passar pela mesa onde estavam sentados deputados da Oposição, Temer brincou com Miro Teixeira (Rede-RJ) e Chico Alencar (PSOL-RJ). Depois da conversa, Chico Alencar disse que Temer era muito educado e era impossível brigar com ele.\n\n— O Miro nunca mais me convidou para fumar um charuto — disse Temer.\n\n— A última vez que vi um presidente fumando um charuto, esse presidente era Fidel Castro — interveio Chico Alencar.\n\n— Pois é. O Chico está dizendo que isso pode significar que você vai ficar 40 anos no poder — disse Miro Teixeira.\n\n— Com o aplauso do Chico eu fico — respondeu Michel Temer, afagando o deputado da oposição.\n\nO deputado Heráclito Fortes (PSB-PI) lembrou ter dito a Temer, quando tomou posse, que o pior do governo não eram os problemas do cargo, mas ter de morar no Palácio da Alvorada.\n\n— Eu não aguentei uma semana. Aquele lugar não tem jeito de casa e eu não sou dado a palácios. O Jaburu sim, tem mais jeito de casa — disse Temer.\n\nPerguntado se pretendia mudar-se também do Palácio do Jaburu, Temer brincou:\n\n— Sim, daqui um ano e 10 meses.\n\nRAVENA DÁ IMPEACHMENT!\n\nCircularam pela festa vários ministros de Temer, do Tribunal de Contas da União (TCU), José Múcio Monteiro; do STF Marco Aurélio Mello, Luiz Roberto Barroso - que comentava a decisão do Supremo, de considerar crime caixa um com recursos ilegais, como uma quebra de paradigma na política brasileira - e o presidente do Tribunal Superior Eleitoral (TSE), Gilmar Mendes. Numa roda de conversa, um dos convidados comentou que Gilmar estava magro e perguntou se era resultado da dieta Ravena , a que fez a presidente cassada Dilma Rousseff murchar.\n\n— Ravena não! Ravena dá impeachment! — respondeu Gilmar Mendes.\n\nO novo dono do Piantella, Omar Catito, disse que a festa de Noblat era uma reinauguração do restaurante que no passado foi palco dos mais significativos encontros políticos e repassou ao deputado decano Miro Teixeira a palavra para saudar o homenageado. Miro disse que Noblat era um dos personagens que batiam ponto no local, e que durante a Constituinte e eleição do presidente Tancredo Neves funcionou como “escritório” dos deputados e senadores capitaneados pelo doutor Ulysses Guimarães.\n\n— Aqui era nosso escritório. Aqui recebíamos nossos recados, não havia celular. Aqui conversávamos sobre as decisões políticas, falávamos da vida alheia, quem saía com quem " />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

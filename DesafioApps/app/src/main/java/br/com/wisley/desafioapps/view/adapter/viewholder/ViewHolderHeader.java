@@ -17,13 +17,14 @@ public class ViewHolderHeader extends RecyclerView.ViewHolder {
     private RelativeLayout rlTopNews;
     private TextView tvMainEditorial;
     private TextView tvTittleMain;
-
+    private View viewItem;
     public ViewHolderHeader(View view) {
         super(view);
 
         this.rlTopNews = (RelativeLayout) view.findViewById(R.id.topNews);
         this.tvMainEditorial = (TextView) view.findViewById(R.id.tvMainEditorial);
         this.tvTittleMain = (TextView) view.findViewById(R.id.tvTittleMain);
+        viewItem = view;
     }
 
     public RelativeLayout getRlTopNews() {
@@ -48,5 +49,9 @@ public class ViewHolderHeader extends RecyclerView.ViewHolder {
 
     public void setTvTittleMain(TextView tvTittleMain) {
         this.tvTittleMain = tvTittleMain;
+    }
+
+    public View getViewItem() {
+        return viewItem;
     }
 }

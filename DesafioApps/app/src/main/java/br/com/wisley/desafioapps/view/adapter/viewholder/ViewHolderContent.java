@@ -18,11 +18,15 @@ public class ViewHolderContent extends RecyclerView.ViewHolder {
     private ImageView ivThumbnail;
     private TextView  tvEditorial;
     private TextView tvTittle;
+
+
+    private View viewItem;
     public ViewHolderContent(View view) {
         super(view);
         this.ivThumbnail = (ImageView) view.findViewById(R.id.ivThumbnail);
         this.tvEditorial = (TextView) view.findViewById(R.id.tvEditorial);
         this.tvTittle = (TextView) view.findViewById(R.id.tvTittle);
+        viewItem = view;
     }
 
     public ImageView getIvThumbnail() {
@@ -48,4 +52,8 @@ public class ViewHolderContent extends RecyclerView.ViewHolder {
     public void setTvTittle(TextView tvTittle) {
         this.tvTittle = tvTittle;
     }
+    public View getViewItem() {
+        return viewItem;
+    }
+
 }

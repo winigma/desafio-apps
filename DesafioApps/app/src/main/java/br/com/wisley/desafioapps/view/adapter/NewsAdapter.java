@@ -20,6 +20,7 @@ import br.com.wisley.desafioapps.R;
 import br.com.wisley.desafioapps.model.Content;
 import br.com.wisley.desafioapps.view.adapter.viewholder.ViewHolderContent;
 import br.com.wisley.desafioapps.view.adapter.viewholder.ViewHolderHeader;
+import br.com.wisley.desafioapps.view.interfaces.OnClickDetail;
 
 /**
  * Created by Wisley on 13/09/17.
@@ -31,8 +32,10 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private List<Content> newsList;
     private Context mContext;
+    private OnClickDetail onClickDetail;
 
-    public NewsAdapter(final List<Content> news) {
+    public NewsAdapter(final List<Content> news, final OnClickDetail onClickDetail) {
+        this.onClickDetail = onClickDetail;
         newsList = new ArrayList<>();
         if (news != null)
             newsList = news;
@@ -54,12 +57,19 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
         //is Header
         if (holder instanceof ViewHolderHeader) {
             final ViewHolderHeader viewHolder = (ViewHolderHeader) holder;
             viewHolder.getTvMainEditorial().setText(getItem(position).getSecao().getNome());
             viewHolder.getTvTittleMain().setText(getItem(position).getTitulo());
+            viewHolder.getViewItem().setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                }
+            });
+
             //load image in Backgroud RelativeLayout obs: Eu poderia ter usado ImageView
             Picasso.with(mContext).load(getItem(position).getImagens().get(0).getUrl()).into(new Target() {
                 @Override
@@ -77,12 +87,22 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                     Log.d("NewsAdapter", "Prepare Load");
                 }
             });
+
+
+            /* this call open detail of news*/
+
+            viewHolder.getViewItem().setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    onClickDetail.onClickOpenDetail(position);
+                }
+            });
         } else {
             //Is content
             final ViewHolderContent viewHolder = (ViewHolderContent) holder;
             viewHolder.getTvEditorial().setText(getItem(position).getSecao().getNome());
             viewHolder.getTvTittle().setText(getItem(position).getTitulo());
-            if(getItem(position).getImagens()!=null && getItem(position).getImagens().size()>0) {
+            if (getItem(position).getImagens() != null && getItem(position).getImagens().size() > 0) {
                 Picasso.with(mContext)
                         .load(getItem(position).getImagens().get(0).getUrl())
                         .error(R.drawable.logo_oglobo)
@@ -90,15 +110,13 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                         .fit()
                         .centerInside()
                         .into(viewHolder.getIvThumbnail());
-            }else{
-                Picasso.with(mContext)
-                        .load(R.drawable.logo_oglobo)
-                        .error(R.drawable.logo_oglobo)
-                        .placeholder(R.drawable.logo_oglobo)
-                        .fit()
-                        .centerInside()
-                        .into(viewHolder.getIvThumbnail());
             }
+            viewHolder.getViewItem().setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    onClickDetail.onClickOpenDetail(position);
+                }
+            });
 
         }
 
@@ -128,7 +146,7 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
      * @return
      */
     public Content getItem(final int position) {
-        if (position < 0 || position > newsList.size()){
+        if (position < 0 || position > newsList.size()) {
             return null;
         }
         return newsList.get(position);
