@@ -3,9 +3,7 @@ package br.com.wisley.desafioapps.model.response;
 
 import br.com.wisley.desafioapps.network.enums.HttpStatusCode;
 
-/**
- * Created by Murilo on 06/10/16.
- */
+
 
 public class ErrorResponse {
 
