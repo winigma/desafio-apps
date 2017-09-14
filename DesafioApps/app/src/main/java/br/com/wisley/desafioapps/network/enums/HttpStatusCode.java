@@ -1,8 +1,5 @@
 package br.com.wisley.desafioapps.network.enums;
 
-/**
- * Created by Murilo on 06/10/16.
- */
 
 public enum HttpStatusCode {
 

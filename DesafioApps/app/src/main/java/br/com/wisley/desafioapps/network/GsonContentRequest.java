@@ -14,9 +14,7 @@ import java.io.UnsupportedEncodingException;
 
 import br.com.wisley.desafioapps.util.Utils;
 
-/**
- * Created by Murilo on 06/10/16.
- */
+
 
 public class GsonContentRequest<T> extends GsonRequest<T> {
 

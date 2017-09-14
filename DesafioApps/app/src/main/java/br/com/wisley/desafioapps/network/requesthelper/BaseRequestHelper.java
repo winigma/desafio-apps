@@ -13,7 +13,10 @@ import br.com.wisley.desafioapps.model.response.ErrorResponse;
 import br.com.wisley.desafioapps.network.enums.HttpStatusCode;
 import br.com.wisley.desafioapps.network.enums.ServiceMessage;
 
-
+/**
+ *
+ * @param <T>
+ */
 public abstract class BaseRequestHelper<T> {
 
     protected Class<T> clazz;
