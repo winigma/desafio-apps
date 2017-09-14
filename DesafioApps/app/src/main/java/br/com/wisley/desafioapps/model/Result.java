@@ -17,6 +17,9 @@ public class Result implements Parcelable{
         conteudos = in.createTypedArrayList(Content.CREATOR);
         produto = in.readString();
     }
+    public Result (List<Content> result){
+        this.conteudos = result;
+    }
 
     public static final Creator<Result> CREATOR = new Creator<Result>() {
         @Override
