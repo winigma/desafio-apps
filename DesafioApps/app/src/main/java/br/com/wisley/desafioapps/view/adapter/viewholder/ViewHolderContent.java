@@ -56,4 +56,7 @@ public class ViewHolderContent extends RecyclerView.ViewHolder {
         return viewItem;
     }
 
+    public void setViewItem(View viewItem) {
+        this.viewItem = viewItem;
+    }
 }

@@ -12,10 +12,15 @@
         android:layout_gravity="center">
 
         <RelativeLayout
-            android:id="@+id/topNews"
+            android:id="@+id/topNewsHeader"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:background="@drawable/logo_oglobo">
+            android:layout_height="220dp"
+            >
+            <ImageView
+                android:id="@+id/ivHeader"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/logo_oglobo"/>
 
             <TextView
                 android:id="@+id/tvMainEditorial"

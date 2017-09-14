@@ -26,7 +26,6 @@ public class Content implements Parcelable {
     private Section secao;
 
 
-
     private boolean isHeader;
 
 
@@ -81,7 +80,19 @@ public class Content implements Parcelable {
     }
 
     public List<String> getAutores() {
+
         return autores;
+    }
+
+    public String author() {
+        if (autores != null && autores.size() > 0) {
+            String publisher = " ";
+            for (String author : autores) {
+                publisher += author;
+            }
+            return publisher;
+        } else
+            return "";
     }
 
     public void setAutores(List<String> autores) {
@@ -183,6 +194,7 @@ public class Content implements Parcelable {
     public void setSecao(Section secao) {
         this.secao = secao;
     }
+
     public boolean isHeader() {
         return isHeader;
     }

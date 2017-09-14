@@ -70,23 +70,14 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 }
             });
 
-            //load image in Backgroud RelativeLayout obs: Eu poderia ter usado ImageView
-            Picasso.with(mContext).load(getItem(position).getImagens().get(0).getUrl()).into(new Target() {
-                @Override
-                public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
-                    viewHolder.getRlTopNews().setBackground(new BitmapDrawable(bitmap));
-                }
-
-                @Override
-                public void onBitmapFailed(Drawable errorDrawable) {
-                    Log.d("NewsAdapter", "Prepare Load");
-                }
-
-                @Override
-                public void onPrepareLoad(Drawable placeHolderDrawable) {
-                    Log.d("NewsAdapter", "Prepare Load");
-                }
-            });
+            if (getItem(position).getImagens() != null && getItem(position).getImagens().size() > 0) {
+                Picasso.with(mContext)
+                        .load(getItem(position).getImagens().get(0).getUrl())
+                        .error(R.drawable.logo_oglobo)
+                        .placeholder(R.drawable.logo_oglobo)
+                        .fit()
+                        .into(viewHolder.getIvHeader());
+            }
 
 
             /* this call open detail of news*/

@@ -7,7 +7,7 @@ import android.os.Parcelable;
  * Created by Wisley on 12/09/17.
  */
 
-public class Image implements Parcelable{
+public class Image implements Parcelable {
     private String autor;
     private String fonte;
     private String legenda;
@@ -75,5 +75,17 @@ public class Image implements Parcelable{
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public String copyRights() {
+        String copy = "";
+        if (!legenda.isEmpty()) {
+            copy += legenda+" - ";
+        }
+        if (!fonte.isEmpty()) {
+            copy += fonte;
+        }
+
+        return copy;
     }
 }

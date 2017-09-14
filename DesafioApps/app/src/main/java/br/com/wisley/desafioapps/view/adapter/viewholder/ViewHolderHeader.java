@@ -2,6 +2,7 @@ package br.com.wisley.desafioapps.view.adapter.viewholder;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -18,13 +19,16 @@ public class ViewHolderHeader extends RecyclerView.ViewHolder {
     private TextView tvMainEditorial;
     private TextView tvTittleMain;
     private View viewItem;
+    private ImageView ivHeader;
     public ViewHolderHeader(View view) {
         super(view);
 
-        this.rlTopNews = (RelativeLayout) view.findViewById(R.id.topNews);
+        this.rlTopNews = (RelativeLayout) view.findViewById(R.id.topNewsHeader);
         this.tvMainEditorial = (TextView) view.findViewById(R.id.tvMainEditorial);
         this.tvTittleMain = (TextView) view.findViewById(R.id.tvTittleMain);
         viewItem = view;
+        this.ivHeader = (ImageView) view.findViewById(R.id.ivHeader);
+
     }
 
     public RelativeLayout getRlTopNews() {
@@ -53,5 +57,13 @@ public class ViewHolderHeader extends RecyclerView.ViewHolder {
 
     public View getViewItem() {
         return viewItem;
+    }
+
+    public void setViewItem(View viewItem) {
+        this.viewItem = viewItem;
+    }
+
+    public ImageView getIvHeader() {
+        return ivHeader;
     }
 }
