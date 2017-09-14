@@ -58,6 +58,9 @@ public class HomeFragment extends Fragment implements IContentCallback, OnClickD
     @Override
     public void notifyError(ErrorResponse errorResponse) {
         Toast.makeText(getActivity(), "Error", Toast.LENGTH_LONG).show();
+        mHolder.getRvBody().setVisibility(View.GONE);
+        mHolder.getIvError().setVisibility(View.VISIBLE);
+        mHolder.getTvError().setVisibility(View.VISIBLE);
     }
 
     @Override
@@ -67,10 +70,13 @@ public class HomeFragment extends Fragment implements IContentCallback, OnClickD
 
     @Override
     public void notifySucces(final Result reponse) {
+        mHolder.getRvBody().setVisibility(View.VISIBLE);
+        mHolder.getIvError().setVisibility(View.GONE);
+        mHolder.getTvError().setVisibility(View.GONE);
         reponse.getConteudos().get(0).setHeader(true);
         this.mAdapter = new NewsAdapter(reponse.getConteudos(), this);
         this.mHolder.getRvBody().setAdapter(this.mAdapter);
-        Toast.makeText(getActivity(), "Sucesso", Toast.LENGTH_LONG).show();
+
     }
 
     /**

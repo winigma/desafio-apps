@@ -24,4 +24,22 @@
         </RelativeLayout>
     </ScrollView>
 
+    <ImageView
+        android:id="@+id/ivError"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:src="@drawable/error"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/tvError"
+        android:text="@string/msg_error"
+        android:layout_below="@+id/ivError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        />
+
 </RelativeLayout>

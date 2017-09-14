@@ -86,7 +86,6 @@ public class DesafioApplication extends Application {
     public <T> boolean addRequestQueue(Request<T> req) {
         if (NetworkUtils.isNetworkAvailable(this)) {
             req.setRetryPolicy(retryPolicy());
-            //req.setRetryPolicy(new TokenRetryPolicy(req,REQUEST_TIMEOUT, 1, 1f ));
             getRequestQueue().add(req);
             return true;
         }

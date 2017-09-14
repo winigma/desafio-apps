@@ -3,6 +3,8 @@ package br.com.wisley.desafioapps.view.holder;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import br.com.wisley.desafioapps.R;
 
@@ -13,6 +15,9 @@ import br.com.wisley.desafioapps.R;
 public class HolderHomeFragment extends AbstractHolderFragment {
 
     private RecyclerView rvBody;
+    private TextView tvError;
+    private ImageView ivError;
+
 
     public HolderHomeFragment(View siteSelectionView) {
         super(siteSelectionView);
@@ -24,6 +29,8 @@ public class HolderHomeFragment extends AbstractHolderFragment {
     @Override
     protected void initializeFields() {
         this.rvBody = (RecyclerView) getField(R.id.rvBody);
+        this.tvError = (TextView) getField(R.id.tvError);
+        this.ivError = (ImageView) getField(R.id.ivError);
 
     }
 
@@ -40,5 +47,13 @@ public class HolderHomeFragment extends AbstractHolderFragment {
 
     public void setRvBody(RecyclerView rvBody) {
         this.rvBody = rvBody;
+    }
+
+    public TextView getTvError() {
+        return tvError;
+    }
+
+    public ImageView getIvError() {
+        return ivError;
     }
 }

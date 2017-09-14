@@ -112,6 +112,7 @@ public abstract class BaseRequestHelper<T> {
 
         if (!DesafioApplication.getInstance().addRequestQueue(request)) {
             //TODO network fail hideProgress
+            request.getErrorListener();
         }
     }
 
@@ -119,6 +120,7 @@ public abstract class BaseRequestHelper<T> {
         request.setTag(tag);
         if (!DesafioApplication.getInstance().addRequestQueue(request)) {
             //TODO network fail hideProgress
+            request.getErrorListener();
         }
     }
 

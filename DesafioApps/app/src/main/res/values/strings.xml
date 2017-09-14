@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Desafio Apps</string>
     <string name="main_tittle">O GLOBO</string>
+    <string name="msg_error">Ocorreu um erro inesperado, verifique sua internet ou tente novamente mais tarde</string>
 
 </resources>
