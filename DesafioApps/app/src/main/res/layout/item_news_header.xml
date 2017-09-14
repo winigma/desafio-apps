@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!-- A CardView that contains a TextView -->
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/topNews"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@drawable/logo_oglobo">
+
+            <TextView
+                android:id="@+id/tvMainEditorial"
+                style="@style/TextEditorial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tvTittleMain"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:text="Brasil" />
+
+            <TextView
+                android:id="@+id/tvTittleMain"
+                style="@style/TextViewNewsMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:paddingBottom="8dp"
+                android:text="Sergio Cabral e  denunciado pela 6
+             vez na Lavajato" />
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
